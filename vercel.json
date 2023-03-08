@@ -1,22 +1,6 @@
 {
-    "functions": {
-      "notificar_temperatura": {
-        "handler": "notificador_temperatura.notificar_temperatura",
-        "memory": 128
-      }
-    },
-    "routes": [
-      {
-        "src": "/notificador_temperatura",
-        "dest": "/.vercel/functions/notificar_temperatura"
-      }
-    ],
-    "crons": [
-      {
-        "path": "/cron",
-        "schedule": "0 5 * * *"
-      }
-    ]
+    "build": {
+      "cron": "*/30 * * * *"
+    }
   }
- 
   

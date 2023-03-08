@@ -1,7 +1,5 @@
 import requests
-import schedule
-import time
-
+from twilio.rest import Client
 
 """Función que notifica la temperatura"""
 def notificar_temperatura():
@@ -23,11 +21,7 @@ def notificar_temperatura():
     else:
         print("No se pudo obtener la temperatura")
 
-
-
 """Función que envía un mensaje de texto"""
-from twilio.rest import Client
-
 account_sid = "SKd6f8293a1a6501d9e52d15fdfaefe27c"
 auth_token = "dpNtbZKKtqm1CifxBd2hML7X0KmUkd85"
 twilio_number = "3571638693"
@@ -42,13 +36,5 @@ def enviar_mensaje(texto):
     )
     print(f"Mensaje enviado a {message.to}: {message.body}")
 
-
-
-
-"""Recibir notificaciones periódicas"""
-schedule.every(30).minutes.do(notificar_temperatura)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-
+"""Ejecución del script"""
+notificar_temperatura()
