@@ -1,12 +1,6 @@
 {
   "name": "api-temp",
   "version": 2,
-  "builds": [
-    {
-      "src": "handler.py",
-      "use": "@now/python"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
@@ -15,9 +9,16 @@
   ],
   "functions": {
     "notificar_temperatura": {
-      "schedule": "*/5 * * * *",
-      "maxDuration": 10,
-      "runtime": "@now/python"
+      "memory": 128,
+      "timeout": 10,
+      "runtime": "python3.9",
+      "events": [
+        {
+          "schedule": {
+            "cron": "*/5 * * * *"
+          }
+        }
+      ]
     }
   }
 }
