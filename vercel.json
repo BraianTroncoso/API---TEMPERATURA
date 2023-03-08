@@ -1,0 +1,15 @@
+{
+    "functions": {
+      "notificar_temperatura": {
+        "handler": "notificador_temperatura.notificar_temperatura",
+        "memory": 128
+      }
+    },
+    "routes": [
+      {
+        "src": "/API-TEMPERATURA",
+        "dest": "/.vercel/functions/notificar_temperatura"
+      }
+    ]
+  }
+  
