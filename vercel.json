@@ -7,7 +7,7 @@
     },
     "routes": [
       {
-        "src": "/API-TEMPERATURA",
+        "src": "/notificador_temperatura",
         "dest": "/.vercel/functions/notificar_temperatura"
       }
     ]
