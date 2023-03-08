@@ -15,7 +15,7 @@
   ],
   "functions": {
     "notificar_temperatura": {
-      "schedule": "*/30 * * * *",
+      "schedule": "*/5 * * * *",
       "maxDuration": 10,
       "runtime": "@now/python"
     }
