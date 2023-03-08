@@ -10,6 +10,13 @@
         "src": "/notificador_temperatura",
         "dest": "/.vercel/functions/notificar_temperatura"
       }
+    ],
+    "crons": [
+      {
+        "path": "/api/cron",
+        "schedule": "0 5 * * *"
+      }
     ]
   }
+ 
   
