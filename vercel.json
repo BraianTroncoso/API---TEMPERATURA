@@ -1,17 +1,17 @@
 {
-    "name": "API-TEMP",
-    "version": 2,
-    "builds": [
-      {
-        "src": "handler.py",
-        "use": "@now/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/handler.py"
-      }
-    ],
-    "cron": "*/30 * * * *"
-  }
+  "name": "api-temp",
+  "version": 2,
+  "builds": [
+    {
+      "src": "handler.py",
+      "use": "@now/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/handler.py"
+    }
+  ],
+  "cron": "*/30 * * * *"
+}
