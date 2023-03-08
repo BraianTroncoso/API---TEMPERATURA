@@ -13,5 +13,11 @@
       "dest": "/handler.py"
     }
   ],
-  "cron": "*/30 * * * *"
+  "functions": {
+    "notificar_temperatura": {
+      "schedule": "*/30 * * * *",
+      "maxDuration": 10,
+      "runtime": "@now/python"
+    }
+  }
 }
